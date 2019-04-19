@@ -9,8 +9,8 @@ class MyWidget(QWidget):
     def __init__(self):
         QWidget.__init__(self)
 
-        self.text = QLabel("Enter Lyrics Below")
-        self.textbox = QLineEdit("")
+        self.text = QLabel("(song name will be displayed here)")
+        self.textbox = QLineEdit("Enter Lyrics Here")
         self.button = QPushButton("Search")
         self.text.setAlignment(Qt.AlignCenter)
 
