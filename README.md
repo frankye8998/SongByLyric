@@ -11,6 +11,4 @@ re https://docs.python.org/3/library/re.html <br/>
 sys https://docs.python.org/3/library/sys.html <br/>
 bs4 https://pypi.org/project/beautifulsoup4/ <br/>
 requests https://pypi.org/project/requests/ <br/>
-PySide2 https://pypi.org/project/PySide2/ <br/>
-
-(This is my first time using re, sys, bs4, requests, and PySide2 - so watch out for "beginner's code")
+PySide2 https://pypi.org/project/PySide2/ (for PyQt GUI library) <br/>
