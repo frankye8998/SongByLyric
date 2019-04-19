@@ -1,8 +1,7 @@
 import re
 import sys
-from bs4 import BeautifulSoup as bs
 import requests
-
+from bs4 import BeautifulSoup as bs
 from PySide2.QtWidgets import *
 from PySide2.QtCore import *
 
