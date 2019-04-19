@@ -33,15 +33,19 @@ class MyWidget(QWidget):
         print(song_tag)
 
         max = 0
-        place = 0
+        place = -1
 
         for i in range(len(song_tag)):
             if len(song_tag[i]) > max:
                 max = len(song_tag)
                 place = i
-        song_name = str(song_tag[place-1])[:-10]
-        print(song_name)
-        self.text.setText("Song Name: " + song_name)
+
+        if place == -1:
+            song_name = "ERROR: no song name found"
+        else:
+            song_name = str(song_tag[place-1])[:-10]
+            print(song_name)
+        self.text.setText(song_name)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
