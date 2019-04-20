@@ -1,6 +1,7 @@
 import re
 import sys
 import requests
+import urllib
 from bs4 import BeautifulSoup as bs
 from PySide2.QtWidgets import *
 from PySide2.QtCore import *
@@ -28,7 +29,7 @@ class MyWidget(QWidget):
     @Slot()
     def magic(self):
         self.text.setText("Looking for Lyrics...")
-        url = "https://www.google.com/search?q=" + self.textbox.text()
+        url = f"https://www.google.com/search?{urllib.parse.urlencode({"q":self.textbox.text()})}"
         html = requests.get(url)
         soup = bs(html.text, 'html.parser')
         song_tag = soup.body.findAll(text=re.compile('- YouTube'))
